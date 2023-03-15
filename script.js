@@ -7,16 +7,17 @@ const faculty = document.querySelector("select");
 function createCard(obj) {
   const card = document.createElement("div");
   card.className = "box";
-  card.innerHTML = `<div class = 'wrapper'><img src=${obj.image} alt='${
-    obj.name
-  }' class='img'></div>
-                     <div class="box_persone">
-                    <h3>${obj.name}</h3>
-                    <p> Actor: ${obj.actor}</p>
-                    <p>Gender: ${obj.gender}</p>
-                    <p>House: ${obj.house}</p>
-                    <p>Wand core: ${obj.wand.core}</p>
-                    <p>Alive: ${obj.alive ? "yes" : "no"}</p>
+  card.innerHTML = `
+  <div class = 'content-img'><img src=${obj.image} alt='${obj.name}'></div>
+                     <div class="content-text">
+                    <h3 class="content-title">${obj.name}</h3>
+                    <ul class="content-list">
+                    <li> Actor: ${obj.actor}</li>
+                    <li>Gender: ${obj.gender}</li>
+                    <li>House: ${obj.house}</li>
+                    <li>Wand core: ${obj.wand.core}</li>
+                    <li>Alive: ${obj.alive ? "yes" : "no"}</li>
+                    </ul>
                     </div>`;
 
   return card;
