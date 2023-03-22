@@ -1,8 +1,8 @@
 @import url("./reset.css");
 
-.mx-auto {
+/* .mx-auto {
   margin: 0 auto;
-}
+} */
 
 body {
   margin: 0 auto;
@@ -106,10 +106,12 @@ p {
   height: 1px;
   background-color: #dee2e6;
 }
+.container {
+  margin: 0 auto;
+}
 
 .grid {
-  justify-content: center;
-  margin: 0 auto;
+  margin-left: 376px;
   display: grid;
   grid-template-columns: repeat(2, 0fr);
   grid-template-rows: repeat(2, 0fr);
@@ -152,7 +154,16 @@ p {
   .header {
     margin-left: 40px;
   }
+  .grid {
+    margin-left: 40px;
+  }
 }
 
 @media (max-width: 400px) {
+  .header {
+    overflow: auto;
+  }
+  .grid {
+    grid-template-columns: repeat(1, 0fr);
+  }
 }
